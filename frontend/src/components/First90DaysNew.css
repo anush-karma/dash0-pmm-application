@@ -1,0 +1,161 @@
+.first-90-new {
+  min-height: 100vh;
+  padding: 8rem 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.first-90-new::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(185, 28, 28, 0.03), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.days-wrap-new {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.days-title-new {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: #111;
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline-new {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline-track-new {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.1);
+}
+
+.timeline-fill-new {
+  width: 100%;
+  background: #b91c1c;
+  box-shadow: 0 0 8px rgba(185, 28, 28, 0.4);
+}
+
+.phases-new {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding-left: 80px;
+}
+
+.phase-new {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.phase-marker-new {
+  position: absolute;
+  left: -80px;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #b91c1c;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 16px rgba(185, 28, 28, 0.3);
+}
+
+.phase-info-new {
+  flex: 1;
+}
+
+.phase-name-new {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #111;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.phase-list-new {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.phase-list-new li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.phase-list-new li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .first-90-new {
+    padding: 6rem 0;
+  }
+
+  .days-wrap-new {
+    padding: 0 1.5rem;
+  }
+
+  .timeline-track-new {
+    left: 20px;
+  }
+
+  .phases-new {
+    padding-left: 60px;
+    gap: 3rem;
+  }
+
+  .phase-marker-new {
+    left: -60px;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .phase-name-new {
+    font-size: 1.5rem;
+  }
+
+  .phase-list-new li {
+    font-size: 14px;
+  }
+}

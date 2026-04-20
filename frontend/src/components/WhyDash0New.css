@@ -1,0 +1,106 @@
+.why-dash0-final {
+  min-height: 80vh;
+  background: #fafafa;
+  padding: 8rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.why-wrap-final {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.why-image-final {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.why-image-final img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.why-content-final {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.why-title-final {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #111;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.why-text-final {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.why-text-final p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+}
+
+.why-sign-final {
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  color: #b91c1c !important;
+  margin-top: 1rem !important;
+}
+
+.why-signature-final {
+  font-size: 2.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #b91c1c;
+  letter-spacing: 0.08em;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .why-wrap-final {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .why-image-final {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-dash0-final {
+    padding: 6rem 0;
+  }
+
+  .why-wrap-final {
+    padding: 0 2rem;
+  }
+
+  .why-text-final p {
+    font-size: 16px;
+  }
+
+  .why-signature-final {
+    font-size: 2rem;
+  }
+}

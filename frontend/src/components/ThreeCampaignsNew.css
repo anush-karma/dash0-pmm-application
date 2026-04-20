@@ -1,0 +1,150 @@
+.campaigns-grid-layout {
+  min-height: auto;
+  padding: 6rem 0;
+  background: #fafafa;
+  position: relative;
+}
+
+.campaigns-wrap-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.campaigns-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Title card */
+.title-card-grid {
+  background: transparent;
+  border: none;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title-card-grid h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: #111;
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.title-red-grid {
+  color: #b91c1c;
+}
+
+/* Campaign cards */
+.campaign-card-grid {
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.campaign-card-grid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(17, 17, 17, 0.08);
+}
+
+.card-header-grid {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.camp-icon-grid {
+  width: 24px;
+  height: 24px;
+  color: #b91c1c;
+  flex-shrink: 0;
+}
+
+.card-header-grid h3 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #111;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card-desc-grid {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #b91c1c;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-section-grid h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #999;
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.card-section-grid p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+}
+
+.card-format-grid {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  font-size: 13px;
+  color: #777;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.card-format-grid span {
+  font-weight: 700;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .campaigns-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .campaigns-grid-layout {
+    padding: 4rem 0;
+  }
+
+  .campaigns-wrap-grid {
+    padding: 0 2rem;
+  }
+
+  .title-card-grid {
+    padding: 2.5rem 2rem;
+  }
+
+  .campaign-card-grid {
+    padding: 1.75rem;
+  }
+}

@@ -1,0 +1,178 @@
+.first-90-days {
+  min-height: 100vh;
+  padding: 8rem 0;
+  background: #0A0A0A;
+}
+
+.days-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.days-header {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.timeline-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-line-track {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-line-fill {
+  width: 100%;
+  background: linear-gradient(to bottom, #E50914, #FF3B30);
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-left: 100px;
+}
+
+.timeline-phase {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+}
+
+.phase-node {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E50914, #FF3B30);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+
+.phase-number {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.phase-content {
+  flex: 1;
+}
+
+.phase-title {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.phase-subtitle {
+  font-size: 1.125rem;
+  color: #A3A3A3;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.phase-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.phase-items li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #A3A3A3;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.phase-items li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #E50914;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .days-container {
+    padding: 0 2rem;
+  }
+
+  .timeline-line-track {
+    left: 20px;
+  }
+
+  .timeline-content {
+    padding-left: 60px;
+  }
+
+  .phase-node {
+    left: -60px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .phase-number {
+    font-size: 0.75rem;
+  }
+
+  .phase-title {
+    font-size: 1.5rem;
+  }
+
+  .phase-subtitle {
+    font-size: 1rem;
+  }
+
+  .phase-items li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .first-90-days {
+    padding: 4rem 0;
+  }
+
+  .days-header {
+    margin-bottom: 3rem;
+  }
+
+  .timeline-content {
+    gap: 3rem;
+  }
+}

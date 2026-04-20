@@ -1,0 +1,110 @@
+.ferrari-vision {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0;
+}
+
+.ferrari-background {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.ferrari-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.95));
+}
+
+.ferrari-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.ferrari-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 30px rgba(229, 9, 20, 0.6);
+}
+
+.ferrari-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ferrari-text p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-align: left;
+  margin: 0;
+}
+
+.ferrari-text strong {
+  color: #E50914;
+  font-weight: 700;
+}
+
+.ferrari-closing {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #E50914 !important;
+  text-align: center !important;
+  margin-top: 1rem !important;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ferrari-vision {
+    padding: 6rem 0;
+  }
+
+  .ferrari-content {
+    padding: 0 2rem;
+  }
+
+  .ferrari-title {
+    margin-bottom: 2rem;
+  }
+
+  .ferrari-text p {
+    font-size: 1rem;
+  }
+
+  .ferrari-closing {
+    font-size: 1.125rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .ferrari-content {
+    padding: 0 1.5rem;
+  }
+
+  .ferrari-text {
+    gap: 1.25rem;
+  }
+}

@@ -1,0 +1,93 @@
+.ultimate-vision {
+  min-height: 100vh;
+  background: #000000;
+  padding: 8rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.vision-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.vision-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.vision-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vision-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+}
+
+.vision-text strong {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.vision-image {
+  width: 100%;
+  max-width: 600px;
+  justify-self: end;
+}
+
+.vision-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .vision-wrap {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .vision-image {
+    justify-self: center;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ultimate-vision {
+    padding: 6rem 0;
+  }
+
+  .vision-wrap {
+    padding: 0 2rem;
+  }
+
+  .vision-text p {
+    font-size: 16px;
+  }
+}

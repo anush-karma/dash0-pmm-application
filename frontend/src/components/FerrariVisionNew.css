@@ -1,0 +1,95 @@
+.ferrari-new {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0;
+}
+
+.ferrari-bg-new {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  filter: blur(1px);
+}
+
+.ferrari-dark-new {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.88));
+}
+
+.ferrari-main-new {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.ferrari-h2-new {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 25px rgba(185, 28, 28, 0.5);
+}
+
+.ferrari-content-new {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ferrari-content-new p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-align: left;
+  margin: 0;
+}
+
+.ferrari-content-new strong {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.ferrari-close-new {
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  color: #ddd !important;
+  text-align: center !important;
+  margin-top: 1rem !important;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .ferrari-new {
+    padding: 6rem 0;
+  }
+
+  .ferrari-main-new {
+    padding: 0 1.5rem;
+  }
+
+  .ferrari-h2-new {
+    margin-bottom: 2rem;
+  }
+
+  .ferrari-content-new p {
+    font-size: 16px;
+  }
+
+  .ferrari-close-new {
+    font-size: 15px !important;
+  }
+}

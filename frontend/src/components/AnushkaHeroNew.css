@@ -1,0 +1,253 @@
+.hero-new {
+  min-height: 100vh;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content-new {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top left genre pills - like ACTION, SCI-FI */
+.genre-pills {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.pill {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Top right application text */
+.application-text {
+  position: absolute;
+  top: 3rem;
+  right: 3%;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #b91c1c;
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+/* Side text - like "TOM HOLLAND" and "ANDREW GARFIELD" */
+.side-text {
+  position: absolute;
+  top: 36%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 5;
+}
+
+.left-text {
+  left: 3.5%;
+}
+
+.right-text {
+  right: 3.5%;
+  align-items: flex-end;
+}
+
+.text-item {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Name text on right side */
+.name-text {
+  top: 36%;
+  gap: 0.5rem;
+}
+
+.name-line {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+  text-align: right;
+}
+
+/* Portrait */
+.hero-portrait-wrapper {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  z-index: 3;
+}
+
+.portrait-glow {
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle, rgba(185, 28, 28, 0.25), transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 1;
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-portrait-wrapper {
+    width: 500px;
+    height: 500px;
+  }
+
+  .text-item {
+    font-size: 2rem;
+  }
+
+  .name-line {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-portrait-wrapper {
+    width: 450px;
+    height: 450px;
+  }
+
+  .side-text {
+    top: 35%;
+  }
+
+  .left-text {
+    left: 2.5%;
+  }
+
+  .right-text {
+    right: 2.5%;
+  }
+
+  .name-text {
+    top: 33%;
+  }
+
+  .text-item {
+    font-size: 1.75rem;
+  }
+
+  .name-line {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-portrait-wrapper {
+    width: 380px;
+    height: 380px;
+  }
+
+  .genre-pills {
+    top: 15%;
+    left: 2%;
+    gap: 0.75rem;
+  }
+
+  .pill {
+    font-size: 11px;
+    padding: 0.4rem 1rem;
+  }
+
+  .application-text {
+    top: 2rem;
+    right: 2%;
+    font-size: 11px;
+  }
+
+  .side-text {
+    top: 32%;
+  }
+
+  .text-item {
+    font-size: 1.4rem;
+  }
+
+  .name-text {
+    top: 30%;
+  }
+
+  .name-line {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-portrait-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+
+  .genre-pills {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .side-text {
+    top: 30%;
+  }
+
+  .left-text {
+    left: 2%;
+  }
+
+  .right-text {
+    right: 2%;
+  }
+
+  .name-text {
+    top: 28%;
+  }
+
+  .text-item {
+    font-size: 1.1rem;
+  }
+
+  .name-line {
+    font-size: 2rem;
+  }
+}
