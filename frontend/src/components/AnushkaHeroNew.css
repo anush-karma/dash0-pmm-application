@@ -217,56 +217,80 @@
 }
 
 @media (max-width: 640px) {
-  /* Bigger portrait — nearly full-width, centered */
-  .hero-portrait-wrapper {
-    width: 340px;
-    height: 340px;
+  /* Switch to vertical flex column — padding matches rest of page (24px) */
+  .hero-content-new {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 72px 24px 2rem;
+    height: auto;
+    min-height: 100vh;
+    gap: 1rem;
   }
 
-  /* Pills: horizontal row that wraps instead of stacking vertically */
+  /* Application text pinned top-right, aligned to same 24px margin */
+  .application-text {
+    top: 1.5rem;
+    right: 24px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  /* Pills: static flow, horizontal row — order 1 */
   .genre-pills {
-    top: 12%;
-    left: 3%;
+    position: static;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.5rem;
+    order: 1;
   }
 
   .pill {
-    font-size: 10px;
-    padding: 0.35rem 0.75rem;
+    font-size: 11px;
+    padding: 0.4rem 1rem;
   }
 
-  /* Side text: vertically centered with portrait */
+  /* All side-text: leave absolute flow, reset transforms */
   .side-text {
-    top: 50%;
-    transform: translateY(-50%);
-    gap: 0.2rem;
+    position: static;
+    transform: none;
+    gap: 0.25rem;
   }
 
+  /* "5 YRS IN B2B / EX-SIGNOZ" — above portrait, left-aligned — order 2 */
   .left-text {
-    left: 2%;
+    order: 2;
+    align-items: flex-start;
   }
 
+  /* Portrait — full content width, natural square via aspect-ratio — order 3 */
+  .hero-portrait-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    order: 3;
+  }
+
+  /* "ANUSHKA KARMAKAR" — below portrait, right-aligned — order 4 */
   .right-text {
-    right: 2%;
+    order: 4;
+    align-self: flex-end;
+    align-items: flex-end;
   }
 
-  /* Name: also vertically centered (overrides top: 28% from previous rule) */
   .name-text {
-    top: 50%;
+    top: unset;
   }
 
-  /* Allow left-text items to wrap within a tight column */
   .text-item {
-    font-size: 0.85rem;
-    white-space: normal;
-    max-width: 65px;
+    font-size: 1rem;
+    white-space: nowrap;
     line-height: 1.1;
   }
 
   .name-line {
-    font-size: 1.4rem;
+    font-size: 2rem;
+    text-align: right;
     line-height: 1;
   }
 }
