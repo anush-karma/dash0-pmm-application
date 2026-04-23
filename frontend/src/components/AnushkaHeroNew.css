@@ -217,18 +217,31 @@
 }
 
 @media (max-width: 640px) {
+  /* Bigger portrait — nearly full-width, centered */
   .hero-portrait-wrapper {
-    width: 300px;
-    height: 300px;
+    width: 340px;
+    height: 340px;
   }
 
+  /* Pills: horizontal row that wraps instead of stacking vertically */
   .genre-pills {
-    flex-direction: column;
-    gap: 0.5rem;
+    top: 12%;
+    left: 3%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem;
   }
 
+  .pill {
+    font-size: 10px;
+    padding: 0.35rem 0.75rem;
+  }
+
+  /* Side text: vertically centered with portrait */
   .side-text {
-    top: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 0.2rem;
   }
 
   .left-text {
@@ -239,15 +252,21 @@
     right: 2%;
   }
 
+  /* Name: also vertically centered (overrides top: 28% from previous rule) */
   .name-text {
-    top: 28%;
+    top: 50%;
   }
 
+  /* Allow left-text items to wrap within a tight column */
   .text-item {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
+    white-space: normal;
+    max-width: 65px;
+    line-height: 1.1;
   }
 
   .name-line {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    line-height: 1;
   }
 }
